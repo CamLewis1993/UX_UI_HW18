@@ -10,9 +10,6 @@
   font-family: caviardreams;
   src: url(../caviar_dreams/CaviarDreams.ttf);
 }
-#logo {
-  font-family: demode;
-}
 body {
   margin: 0;
   background-color: #F8E4D7;
@@ -38,6 +35,8 @@ header {
   padding: 15px;
   font-family: demodenegative;
   font-size: large;
+  height: 15vh;
+  display: flex;
 
 }
 header nav {
@@ -101,9 +100,23 @@ nav a {
 }
 
 @media only screen and (max-width: 640px) {
-  .skill-item {
+  #mySkills-container {
     flex-direction: column;
-    width: 100%;
+  }
+  .skill-item {
+    width: 90%;
+    padding: 2% 3% 1%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0%;
+    grid-template-areas:
+      "CASESTUDY1" 
+      "CASESTUDY2" 
+      "CASESTUDY3";
+    height: 50%;
   }
 }
 
@@ -168,6 +181,7 @@ button {
 }
 
 footer {
+  margin-top: 2%;
   background-color: #F8E4D7;
   padding: 5px;
   bottom: 0;
